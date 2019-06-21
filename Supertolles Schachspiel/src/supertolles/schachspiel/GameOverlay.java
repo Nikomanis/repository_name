@@ -157,4 +157,7 @@ public class GameOverlay extends JPanel{
             gamestate++;
         }
     }
+     public GameLogic getLogic(){
+        return logic;
+    }
 }

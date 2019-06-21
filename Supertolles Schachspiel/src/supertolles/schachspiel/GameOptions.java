@@ -14,15 +14,17 @@ import javax.swing.JFrame;
 public class GameOptions {
     JFrame window;
     GameOverlay game;
-    
+    Protocol protocol;
     
     public GameOptions(){
         game = new GameOverlay(0, 8);
+        protocol = new Protocol(game);
         
         window = new JFrame();
         window.setBounds(0, 0, 1000, 1000);
         window.setContentPane(game);
         window.setVisible(true);
+        window.add(protocol.textArea);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
     }
